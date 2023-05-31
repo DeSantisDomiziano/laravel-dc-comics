@@ -16,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PageController::class, 'index'])->name('index');
-Route::resource('admin', ComicController::class);
+Route::resource('/admin/products', ComicController::class, ["as" => "admin"]);
