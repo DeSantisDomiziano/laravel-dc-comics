@@ -49,7 +49,7 @@ class ComicController extends Controller
 
         Comic::create($data);
 
-        return to_route('admin.products.index')->with('message', 'comicbook added successfully');
+        return to_route('admin.comics.index')->with('message', 'comicbook added successfully');
     }
 
     /**
@@ -61,7 +61,7 @@ class ComicController extends Controller
     public function show(Comic $comic)
     {
         //$comic = Comic::all();
-        return view('admin.products.show', compact('$comic'));
+        return view('admin.products.show', compact('comic'));
     }
 
     /**

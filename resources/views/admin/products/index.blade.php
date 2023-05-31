@@ -14,7 +14,7 @@
     </div>
 
     <div class="text-end">
-        <a href="{{ route('admin.products.create') }}" class="btn btn-info my-3 px-4 text-white fw-bold">
+        <a href="{{ route('admin.comics.create') }}" class="btn btn-info my-3 px-4 text-white fw-bold">
             <i class="fa-solid fa-plus"></i>
             ADD
         </a>
@@ -41,7 +41,7 @@
                         <td scope="row" class="text-center"> {{ $comic->title }}</td>
                         <td scope="row" class="text-center"> {{ $comic->price }}</td>
                         <td scope="row" class="text-center"> 
-                            <a href="{{ route('admin.products.show', $comic->id) }}" class="mx-2">
+                            <a href="{{ route('admin.comics.show', $comic->id) }}" class="mx-2">
                                 <i class="fa-solid fa-xl fa-eye" title="view"></i>
                             </a>
                             <a href="" class="mx-2">

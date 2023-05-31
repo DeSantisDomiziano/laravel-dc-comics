@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container py-5 bg-dark-subtle rounded-4 my-4">
-    <form action="{{ route('admin.products.store') }}" method="post">
+    <form action="{{ route('admin.comics.store') }}" method="post">
     @csrf
 
         <div class="mb-3">
