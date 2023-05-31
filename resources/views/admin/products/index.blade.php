@@ -2,6 +2,17 @@
 
 @section('content')
 <div class="container py-5">
+
+    <div class="px-5">
+        @if(session('message'))
+        <div class="alert alert-success p-4">
+            <strong class="fs-4">
+                {{ session('message') }}
+            </strong>
+        </div>
+        @endif
+    </div>
+
     <div class="text-end">
         <a href="{{ route('admin.products.create') }}" class="btn btn-info my-3 px-4 text-white fw-bold">
             <i class="fa-solid fa-plus"></i>
@@ -30,13 +41,13 @@
                         <td scope="row" class="text-center"> {{ $comic->title }}</td>
                         <td scope="row" class="text-center"> {{ $comic->price }}</td>
                         <td scope="row" class="text-center"> 
-                            <a href="" class="mx-1">
-                                <i class="fa-solid fa-xl fa-pen" title="edit"></i>
-                            </a>
-                            <a href="" class="mx-1">
+                            <a href="{{ route('admin.products.show', $comic->id) }}" class="mx-2">
                                 <i class="fa-solid fa-xl fa-eye" title="view"></i>
                             </a>
-                            <a href="" class="mx-1">
+                            <a href="" class="mx-2">
+                                <i class="fa-solid fa-xl fa-pen" title="edit"></i>
+                            </a>
+                            <a href="" class="mx-2">
                                 <i class="fa-solid fa-xl fa-trash" title="view"></i>
                             </a>
                         </td>
