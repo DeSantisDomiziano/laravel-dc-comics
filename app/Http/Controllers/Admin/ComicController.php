@@ -37,7 +37,19 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        //dd($request->all());
+        $data = [
+            "title" => $request->title,
+            "thumb" => $request->thumb,
+            "description" => $request->description,
+            "price" => $request->price,
+            "sale_date" => $request->sale_date,
+            "type" => $request->type,
+        ];
+
+        Comic::create($data);
+
+        return to_route('admin.products.index')->with('message', 'comicbook added successfully');
     }
 
     /**
