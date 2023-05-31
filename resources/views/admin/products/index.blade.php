@@ -1,12 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container text-center">
+<div class="container py-5">
+    <div class="text-end">
+        <a href="{{ route('admin.products.create') }}" class="btn btn-info my-3 px-4 text-white fw-bold">
+            <i class="fa-solid fa-plus"></i>
+            ADD
+        </a>
+    </div>
     <div class="table-responsive rounded-4">
         <table class="table table-striped table-hover table-borderless table-primary align-middle">
             <thead class="table-light">
                 <caption>Comicbooks</caption>
-                <tr>
+                <tr class="text-center">
                     <th>ID</th>
                     <th>THUMB</th>
                     <th>TITLE</th>
@@ -19,11 +25,11 @@
                     <tr class="table-primary" >
                         <td scope="row">{{ $comic->id }}</td>
                         <td scope="row">
-                            <img src=" {{ $comic->thumb }} " alt="" height="200">
+                            <img src=" {{ $comic->thumb }} " alt="" width="150">
                         </td>
-                        <td scope="row"> {{ $comic->title }}</td>
-                        <td scope="row"> {{ $comic->price }}</td>
-                        <td scope="row"> 
+                        <td scope="row" class="text-center"> {{ $comic->title }}</td>
+                        <td scope="row" class="text-center"> {{ $comic->price }}</td>
+                        <td scope="row" class="text-center"> 
                             <a href="" class="mx-1">
                                 <i class="fa-solid fa-xl fa-pen" title="edit"></i>
                             </a>
