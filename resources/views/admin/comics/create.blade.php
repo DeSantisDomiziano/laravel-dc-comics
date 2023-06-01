@@ -16,11 +16,10 @@
           <input type="text" name="thumb" id="thumb" class="form-control" placeholder="" aria-describedby="helpId" required>
           <small id="helpId" class="text-muted">Add image path</small>
         </div>
-        
+
         <div class="mb-3">
           <label for="description" class="form-label fs-4 fw-bold">Description</label>
-          <input type="text" name="description" id="description" class="form-control" placeholder="" aria-describedby="helpId" required>
-          <small id="helpId" class="text-muted">Add description</small>
+          <textarea class="form-control" name="description" id="description" rows="3"></textarea>
         </div>
 
         <div class="mb-3">
@@ -31,13 +30,13 @@
 
         <div class="mb-3">
           <label for="sale_date" class="form-label fs-4 fw-bold">Sale Date</label>
-          <input type="text" name="sale_date" id="sale_date" class="form-control" placeholder="" aria-describedby="helpId" required>
-          <small id="helpId" class="text-muted">Add sale date in this form [ YYYY-MM-DD ]</small>
+          <input type="date" name="sale_date" id="sale_date" class="form-control" placeholder="" aria-describedby="helpId">
+          <small id="helpId" class="text-muted">Add sale date </small>
         </div>
 
         <div class="mb-3">
-          <label for="type" class="form-label fs-4 fw-bold">type</label>
-          <input type="text" name="type" id="type" class="form-control" placeholder="" aria-describedby="helpId" required>
+          <label for="type" class="form-label fs-4 fw-bold">Type</label>
+          <input type="text" name="type" id="type" class="form-control" placeholder="" aria-describedby="helpId">
           <small id="helpId" class="text-muted">Add kind of book</small>
         </div>
 

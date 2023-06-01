@@ -16,7 +16,7 @@ class ComicController extends Controller
     public function index()
     {
         $comics = Comic::orderByDesc('id')->get();
-        return view('admin.products.index', compact('comics'));
+        return view('admin.comics.index', compact('comics'));
     }
 
     /**
@@ -26,7 +26,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        return view('admin.products.create');
+        return view('admin.comics.create');
     }
 
     /**
@@ -61,7 +61,7 @@ class ComicController extends Controller
     public function show(Comic $comic)
     {
         //$comic = Comic::all();
-        return view('admin.products.show', compact('comic'));
+        return view('admin.comics.show', compact('comic'));
     }
 
     /**
@@ -70,9 +70,9 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Comic $comic)
     {
-        //
+        return view('admin.comics.edit', compact('comic'));
     }
 
     /**
@@ -82,9 +82,20 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        $data = [
+            "title" => $request->title,
+            "thumb" => $request->thumb,
+            "description" => $request->description,
+            "price" => $request->price,
+            "sale_date" => $request->sale_date,
+            "type" => $request->type,
+        ];
+
+        $comic->update($data);
+
+        return to_route('admin.comics.index')->with('message', 'comic updated');
     }
 
     /**
@@ -93,8 +104,9 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+        return to_route('admin.comics.index')->with('message', 'comic deleted');
     }
 }
