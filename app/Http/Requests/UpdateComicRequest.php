@@ -32,4 +32,13 @@ class UpdateComicRequest extends FormRequest
             "type" => ['min:2', 'max:100'],
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'title.min' => 'il titolo del fumetto è troppo corto, minimo 2 caratteri',
+            'title.max' => 'il titolo del fumetto è troppo lungo, massimo 100 caratteri',
+            'title.required' => 'il campo del titolo non pò essere lasciato vuoto',
+        ];
+    }
 }
