@@ -32,4 +32,16 @@ class StoreComicRequest extends FormRequest
             "type" => ['min:2', 'max:100'],
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'title.min' => 'il titolo del fumetto è troppo corto, minimo 2 caratteri',
+            'title.max' => 'il titolo del fumetto è troppo lungo, massimo 100 caratteri',
+            'thumb.min' => 'il percorso all\'immagine del fumetto è troppo corto, minimo 10 caratteri',
+            'description.min' => 'la descrizione è troppo corta, minimo 2 caratteri',
+            'price.min' => 'il prezzo è troppo basso',
+            'price.max' => 'il prezzo è troppo alto',
+        ];
+    }
 }

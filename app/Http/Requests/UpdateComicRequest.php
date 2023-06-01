@@ -38,7 +38,10 @@ class UpdateComicRequest extends FormRequest
         return [
             'title.min' => 'il titolo del fumetto è troppo corto, minimo 2 caratteri',
             'title.max' => 'il titolo del fumetto è troppo lungo, massimo 100 caratteri',
-            'title.required' => 'il campo del titolo non pò essere lasciato vuoto',
+            'thumb.min' => 'il percorso all\'immagine del fumetto è troppo corto, minimo 10 caratteri',
+            'description.min' => 'la descrizione è troppo corta, minimo 2 caratteri',
+            'price.min' => 'il prezzo è troppo basso',
+            'price.max' => 'il prezzo è troppo alto',
         ];
     }
 }
