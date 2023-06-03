@@ -1,9 +1,3 @@
-<!-- <header>
-    <a href=" {{ route('index') }} ">Home</a>
-    <a href=" {{ route('admin.comics.index') }} ">Admin</a>
-
-</header> -->
-
 <header>
     <section id="top-header">
         <div class="container py-1 text-end text-uppercase">

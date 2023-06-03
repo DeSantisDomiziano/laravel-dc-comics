@@ -53,3 +53,50 @@ div.fs-5 {
     background-image: url(../img/jumbotron.jpg);
     background-size: cover;
 }
+
+
+/* ############ FOOTER SECTION ############ */
+
+#footer-top {
+    background-image: url(../img/footer-bg.jpg);
+    background-size: cover;
+    color: $footerColor;
+
+    h4 {
+        color: $light;
+        font-weight: bold;
+    }
+
+    a {
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 0.9rem;
+        a {
+            font-size: inherit;
+            color: $primary;
+        }
+    }
+}
+
+#logo {
+    background-image: url(../img/dc-logo-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#footer-bottom {
+    background-color: $footerBottom;
+
+    p {
+        vertical-align: sub;
+        font-size: 1.25rem;
+    }
+
+    img {
+        padding-left: 0.5rem;
+        max-width: 35px;
+    }
+}
