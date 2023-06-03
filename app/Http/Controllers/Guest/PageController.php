@@ -10,7 +10,7 @@ class PageController extends Controller
 {
     public function index()
     {
-        $comics = Comic::all();
+        $comics = Comic::orderByDesc('id')->get();
         
         $pages = config('comics_info.pages');
         $dcComics = config('comics_info.dcComics');

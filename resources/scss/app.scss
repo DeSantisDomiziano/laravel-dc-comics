@@ -55,6 +55,58 @@ div.fs-5 {
 }
 
 
+/* ############ MAIN SECTION ############ */
+
+#current-series {
+    background-color: $main;
+    color: $light;
+
+    p {
+        padding: 0.25rem 1.25rem;
+        background-color: $primary;
+        top: 0;
+        left: 0;
+        transform: translate( 0%, -50%);
+    }
+
+    button {
+        color: inherit;
+        border: 0;
+        padding: 0.5rem 4.25rem;
+        background-color: $primary;
+    }
+
+    img {
+        max-height: 200px;
+        aspect-ratio: 1;
+        object-fit: cover;
+        object-position: top;
+    }
+}
+
+#link {
+    background-color: $primary;
+    color: $light;
+
+    img,
+    #svg {
+        max-width: 50px;
+        aspect-ratio: 1;
+        object-fit: contain;
+    }
+
+    #svg {
+        height: 50px;
+        vertical-align: sub;
+        line-height: 3;
+    }
+
+    #svg + p {
+        vertical-align: sub;
+    }
+}
+
+
 /* ############ FOOTER SECTION ############ */
 
 #footer-top {
