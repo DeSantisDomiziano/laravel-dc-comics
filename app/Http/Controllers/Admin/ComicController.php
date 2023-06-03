@@ -62,7 +62,15 @@ class ComicController extends Controller
     public function show(Comic $comic)
     {
         //$comic = Comic::all();
-        return view('admin.comics.show', compact('comic'));
+        $pages = config('comics_info.pages');
+        $dcComics = config('comics_info.dcComics');
+        $shop = config('comics_info.shop');
+        $dc = config('comics_info.dc');
+        $sites = config('comics_info.sites');
+        $socials = config('comics_info.socials');
+        $info = config('comics_info.info');
+
+        return view('admin.comics.show', compact('comic', 'pages', 'dcComics', 'shop', 'dc', 'sites', 'socials', 'info'));
     }
 
     /**
@@ -73,7 +81,15 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        return view('admin.comics.edit', compact('comic'));
+        $pages = config('comics_info.pages');
+        $dcComics = config('comics_info.dcComics');
+        $shop = config('comics_info.shop');
+        $dc = config('comics_info.dc');
+        $sites = config('comics_info.sites');
+        $socials = config('comics_info.socials');
+        $info = config('comics_info.info');
+        
+        return view('admin.comics.edit', compact('comic', 'pages', 'dcComics', 'shop', 'dc', 'sites', 'socials', 'info'));
     }
 
     /**
